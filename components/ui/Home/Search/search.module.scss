@@ -1,0 +1,28 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.search{
+    padding: 6rem $root-spacing;
+    background-color: $color-light-gray;
+    @include flex-row;
+    gap: 4rem;
+
+    select{
+        flex: 1;
+        border: 1px solid rgba(0,0,0,0.3);
+
+        &:focus{
+            border: 1px solid transparent;
+            outline: 1px solid $color-primary;
+        }
+    }
+
+    button{
+        width: 15rem;
+        padding: 1.5rem;
+        background-color: $color-primary;
+        border: 1px solid transparent;
+        color: $color-white;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,77 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.testimonials{
+    margin-top: 2rem;
+    padding: 4rem $root-spacing;
+
+    &__header{
+        width: min(60rem, 100%);
+        margin: 0 auto;
+        @include flex-column;
+        gap: 2rem;
+
+        &__title{
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        &__subtitle{
+            width: min(50rem, 100%);
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.5rem;
+            line-height: 2.5ch;
+        }
+    }
+
+    &__group{
+        margin-top: 4rem;
+    }
+
+    &__dot{
+        width: 2rem;
+        height: 0.5rem;
+        border-radius: 0.2rem;
+        border: none;
+        margin-right: 0.5rem;
+        background-color: #dbd8d8;
+        transition: all 250ms ease;
+
+        &__active{
+            width: 3rem;
+            background-color: $color-primary;
+        }
+    }
+
+    &__card{
+        padding: 2rem 3rem;
+        width: 40rem;
+        height: 40rem;
+        background-color: rgba(252, 245, 249, 0.85);
+        @include flex-column;
+        justify-content: space-between;
+        gap: 4rem;
+        //border-radius: 1rem;
+
+        &__text{
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 2.5ch;
+        }
+
+        &__stack{
+            @include flex-column;
+            gap: 0.8rem;
+        }
+
+        span{
+            font-size: 1.3rem;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+    }
+}
